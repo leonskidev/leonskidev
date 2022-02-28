@@ -3,23 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'nonce-style';">
-
-    <title>Leonski</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'nonce-style';">
 
     <style nonce="style">
       @font-face {
-        src: url("assets/Inter-Regular.ttf");
-        font-family: "Inter";
-        font-display: swap;
+        src: url("assets/Nunito-Regular.ttf");
+        font-family: "Nunito";
         font-weight: 400;
-      }
-
-      @font-face {
-        src: url("assets/Inter-Bold.ttf");
-        font-family: "Inter";
-        font-display: swap;
-        font-weight: 700;
       }
 
       body {
@@ -28,55 +18,42 @@
         margin: 3rem auto;
         padding: 0 2rem;
 
-        background-color: #f6f6f6;
-        color: #444444;
+        background-color: #fefefe;
+        color: #242424;
 
-        font-family: "Inter", sans-serif;
-        font-size: 18px;
-        font-size: clamp(0.75em, 1em + 0.15vw, 1.75em);
+        font-family: "Nunito", "Helvetica Neue", "Helvetica", sans-serif;
+        font-size: max(1em, 18px);
         line-height: 1.4;
       }
 
-      h1, h2, h3 { line-height: 1.2; }
+      footer { font-size: 1rem; }
     </style>
 
-    <!-- Basic -->
-    <meta name="title" content="LeonskiDev">
-    <meta name="description" content="I'm Leon, a systems developer with a touch of web sprinkled in.">
+    <title>Leon Davis</title>
+    <meta name="title" property="og:title" content="Leon Davis">
+    <meta name="description" property="og:description" content="Hey there, I'm Leon—one of those software developers who does stuff with computers, whatever they may be.">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://leonski.dev/">
-    <meta property="og:title" content="LeonskiDev">
-    <meta property="og:description" content="I'm Leon, a systems developer with a touch of web sprinkled in.">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://leonski.dev/">
-    <meta property="twitter:title" content="LeonskiDev">
-    <meta property="twitter:description" content="I'm Leon, a systems developer with a touch of web sprinkled in.">
+    <meta property="og:url" content="https://leonski.dev">
+    <!-- <meta property="og:title" content="Leon Davis">
+    <meta property="og:description" content="Hey there, I'm Leon—one of those software developers who does stuff with computers, whatever they may be."> -->
+    <meta name="twitter:card" content="summary" />
   </head>
 
   <body>
-    <header>
-      <h1>Hey there</h1>
-
-      <p>
-        Whether you're here on purpose or by accident, welcome! I'm <b>Leon</b>,
-        a systems developer with a touch of web sprinkled in. I also enjoy a
-        nice bit of design and photography too.
-      </p>
-    </header>
-
     <main>
+      <p>
+        Hey there, I'm Leon&mdash;one of those software developers who does
+        stuff with computers, whatever they may be.
+      </p>
     </main>
 
     <footer>
-      <small>Copyright &copy; 2021 <b>Leon Davis</b></small>
-      &bullet;
-      <small>Inspired by <b><a href="http://bettermotherfuckingwebsite.com/" target="blank">this genius</a></b></small>
-      &bullet;
-      <small><a href="https://github.com/leonskidev" target="blank">GitHub</a></small>
+      <p>
+        <a href="https://github.com/leonskidev">GitHub</a>
+        &middot;
+        Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a>
+      </p>
     </footer>
   </body>
 </html>
