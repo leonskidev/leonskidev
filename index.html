@@ -99,6 +99,12 @@
     ul>li::marker {
       content: "- ";
     }
+
+    .extern::after {
+      content: "\1f875";
+      font-size: 0.65rem;
+      vertical-align: text-top;
+    }
   </style>
 </head>
 
@@ -114,17 +120,16 @@
   <main>
     <section aria-labelledby="projects">
       <h2 id="projects">Projects</h2>
-      <p><small><i>All links in this section lead to external websites and open in new tabs.</i></small></p>
       <p>
         I do all sorts of <i>stuff</i>, some of which you can find on my
-        <a href="https://github.com/leonskidev" target="_blank">GitHub</a>; the other bits will remain on the cutting
+        <a class="extern" href="https://github.com/leonskidev" target="_blank">GitHub</a>; the other bits will remain on the cutting
         room floor.
       </p>
       <ul>
         <li>
-          <a href="https://github.com/leonskidev/bevy_rhai" target="_blank">Bevy Rhai</a> &mdash;
-          <a href="https://github.com/rhaiscript/rhai" target="_blank">Rhai</a> scripting language support for the
-          <a href="https://github.com/bevyengine/bevy" target="_blank">Bevy</a> game engine.
+          <a class="extern" href="https://github.com/leonskidev/bevy_rhai" target="_blank">Bevy Rhai</a> &mdash;
+          <a class="extern" href="https://github.com/rhaiscript/rhai" target="_blank">Rhai</a> scripting language support for the
+          <a class="extern" href="https://github.com/bevyengine/bevy" target="_blank">Bevy</a> game engine.
         </li>
       </ul>
     </section>
@@ -145,10 +150,10 @@
   <footer>
     <p>
       <small>
-        <a href="https://github.com/leonskidev">GitHub</a>
+        <a class="extern" href="https://github.com/leonskidev">GitHub</a>
         &middot;
-        Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a> who was inspired
-        by <a href="http://motherfuckingwebsite.com">this genius</a>
+        Inspired by <a class="extern" href="http://bettermotherfuckingwebsite.com">this genius</a> who was inspired
+        by <a class="extern" href="http://motherfuckingwebsite.com">this genius</a>
       </small>
     </p>
   </footer>
