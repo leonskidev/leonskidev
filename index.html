@@ -2,44 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Leon Davis</title>
 
   <style>
     @font-face {
-      font-family: "Lora";
+      font-family: "Brygada";
       font-weight: 125 950;
       font-stretch: 75% 125%;
       font-style: normal;
       font-display: swap;
-      src: url("assets/Lora.woff2") format("woff2-variations");
+      src: url("assets/Brygada1918.woff2") format("woff2-variations");
     }
 
     @font-face {
-      font-family: "Lora";
+      font-family: "Brygada";
       font-weight: 125 950;
       font-stretch: 75% 125%;
       font-style: italic;
       font-display: swap;
-      src: url("assets/Lora-Italic.woff2") format("woff2-variations");
+      src: url("assets/Brygada1918-Italic.woff2") format("woff2-variations");
     }
 
     @font-face {
-      font-family: "Poppins";
-      font-weight: 900;
+      font-family: "Jost";
+      font-weight: 125 950;
+      font-stretch: 75% 125%;
       font-style: normal;
       font-display: swap;
-      src: url("assets/Poppins-Black.woff2") format("woff2");
+      src: url("assets/Jost.woff2") format("woff2-variations");
     }
 
     @font-face {
-      font-family: "Poppins";
-      font-weight: 900;
+      font-family: "Jost";
+      font-weight: 125 950;
+      font-stretch: 75% 125%;
       font-style: italic;
       font-display: swap;
-      src: url("assets/Poppins-BlackItalic.woff2") format("woff2");
+      src: url("assets/Jost-Italic.woff2") format("woff2-variations");
     }
 
     :root {
@@ -51,19 +53,19 @@
       --cl-10: 260.5 100% 50%;
       /* --cl-10: 300 100% 50%; */
 
-      --sp-0: 0.125rem;
+      /* --sp-0: 0.125rem; */
       --sp-1: 0.25rem;
-      --sp-2: 0.5rem;
-      --sp-3: 1rem;
+      /* --sp-2: 0.5rem; */
+      /* --sp-3: 1rem; */
       --sp-4: 2rem;
       --sp-5: 3rem;
 
-      --ff-serif: "Lora", "Cambria", "Cochin", "Georgia", "Times New Roman", serif;
-      --ff-sans: "Poppins", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+      --ff-serif: "Brygada", serif;
+      --ff-sans: "Jost", sans-serif;
     }
 
     body {
-      max-width: 60ch;
+      max-width: 640px;
 
       margin: var(--sp-5) auto;
       padding-inline: var(--sp-4);
@@ -75,87 +77,104 @@
       line-height: 1.4;
     }
 
+    header {
+      margin-block: var(-sp-5);
+    }
+
+    footer {
+      font-size: smaller;
+      font-style: italic;
+    }
+
+    footer>p {
+      margin-block: 0;
+    }
+
     h1,
     h2 {
       font-family: var(--ff-sans);
-      font-weight: 900;
+      /* font-size: 1.125rem; */
+      font-weight: 800;
       line-height: 1.2;
     }
 
-    h2 {
-      font-size: 1.25rem;
+    i,
+    em {
+      font-weight: lighter;
     }
 
-    a {
-      color: hsl(var(--cl-10) / 0.75);
-      font-weight: 500;
+    li>p {
+      margin-block: 0.25rem;
     }
 
-    a:hover,
-    a:focus {
-      color: hsl(var(--cl-10) / 1);
+    header>h1>i {
+      font-family: var(--ff-serif);
     }
 
-    ul>li::marker {
-      content: "- ";
-    }
-
-    .extern::after {
-      content: " \1f875";
-      font-size: 0.65rem;
-      vertical-align: text-top;
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Hey there,</h1>
+    <h1>Leon Davis, <i>avid computer wizard</i></h1>
+
     <p>
-      I'm <b>Leon</b> &mdash; one of those magicians (<i>programmers</i>) who performs hocus-pocus (<i>writes code</i>)
-      on computers.
+      Hey there! I'm one of those wizards who writes spells that make computers
+      do stuff.
     </p>
   </header>
 
   <main>
-    <section aria-labelledby="projects">
-      <h2 id="projects">Projects</h2>
+    <section aria-labelledby="spellcraft">
+      <h2 id="spellcraft">Spellcraft</h2>
+
       <p>
-        I do all sorts of <i>stuff</i>, some of which you can find on my
-        <a class="extern" href="https://github.com/leonskidev" target="_blank">GitHub</a>; the other bits will remain on the cutting
-        room floor.
+        You can have a gander at my spellcraft
+        <a href="https://github.com/leonskidev">here</a>, I'm always trying out
+        ideas. Here are some of them:
       </p>
+
       <ul>
         <li>
-          <a class="extern" href="https://github.com/leonskidev/bevy_rhai" target="_blank">Bevy Rhai</a> &mdash;
-          <a class="extern" href="https://github.com/rhaiscript/rhai" target="_blank">Rhai</a> scripting language support for the
-          <a class="extern" href="https://github.com/bevyengine/bevy" target="_blank">Bevy</a> game engine.
+          <p>
+            <a href="https://github.com/leonskidev/ahh-ts">ahh-ts</a> -
+            Mostly <a href="https://rust-lang.org/">Rust</a>-inpired stuff for
+            <a href="https://deno.land">Deno</a>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://github.com/leonskidev/tw4f-rs">tw4f-rs</a> -
+            A tiny and safe abstraction over the
+            <a href="https://wasm4.org/">WASM-4</a> fantasy console.
+          </p>
         </li>
       </ul>
     </section>
 
     <section aria-labelledby="contact">
       <h2 id="contact">Contact</h2>
+
       <p>
-        If you want or need to contact me, you can do so via email
-        <a href="mailto:leonskidev@pm.me">leonskidev@pm.me</a>.
-      </p>
-      <p>
-        Other than that, nothing in particular. Although you might occasionally see me floating around the interwebs, or
-        in passing on the street.
+        You can contact me via email
+        <a href="mailto:leonskidev@pm.me">leonskidev@pm.me</a> or via a
+        sending stone. I don't own any social media accounts, if you think it's
+        me, it isn't.
       </p>
     </section>
   </main>
 
   <footer>
     <p>
-      <small>
-        <a class="extern" href="https://github.com/leonskidev">GitHub</a>
-        &middot;
-        Inspired by <a class="extern" href="http://bettermotherfuckingwebsite.com">this genius</a> who was inspired
-        by <a class="extern" href="http://motherfuckingwebsite.com">this genius</a>
-      </small>
+      <a href="mailto:leonskidev@pm.me">Email</a>
+      &middot;
+      <a href="https://github.com/leonskidev">GitHub</a>
     </p>
+    <p>
+      Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a>, who was inspired
+      by <a href="http://motherfuckingwebsite.com">this genius</a>
+    </p>
+    <p>Copyright 2022 Leon Davis, all rights reserved</p>
   </footer>
 </body>
 
