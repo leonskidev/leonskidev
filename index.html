@@ -1,181 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Davis</title>
 
-  <title>Leon Davis</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-  <style>
-    @font-face {
-      font-family: "Brygada";
-      font-weight: 125 950;
-      font-stretch: 75% 125%;
-      font-style: normal;
-      font-display: swap;
-      src: url("assets/Brygada1918.woff2") format("woff2-variations");
-    }
+      :root {
+        font-size: 18px;
+      }
 
-    @font-face {
-      font-family: "Brygada";
-      font-weight: 125 950;
-      font-stretch: 75% 125%;
-      font-style: italic;
-      font-display: swap;
-      src: url("assets/Brygada1918-Italic.woff2") format("woff2-variations");
-    }
+      html, body {
+        margin: 0;
+        padding: 0;
 
-    @font-face {
-      font-family: "Jost";
-      font-weight: 125 950;
-      font-stretch: 75% 125%;
-      font-style: normal;
-      font-display: swap;
-      src: url("assets/Jost.woff2") format("woff2-variations");
-    }
+        background-color: hsl(0 0% 99.6%);
+        color: hsl(0 0% 14.1%);
 
-    @font-face {
-      font-family: "Jost";
-      font-weight: 125 950;
-      font-stretch: 75% 125%;
-      font-style: italic;
-      font-display: swap;
-      src: url("assets/Jost-Italic.woff2") format("woff2-variations");
-    }
+        font-family: serif;
+        line-height: 1.4;
+      }
 
-    :root {
-      font-size: 18px;
+      body {
+        max-width: calc(80ch + 2rem);
+        margin-inline: auto;
+        padding-inline: 2rem;
+      }
 
-      --cl-60: 0 0% 99.6%;
-      --cl-30: 0 0% 14.1%;
-      /* --cl-10: 205.4 100% 67.1%; */
-      --cl-10: 260.5 100% 50%;
-      /* --cl-10: 300 100% 50%; */
+      header {
+        margin-block: 3rem;
+      }
 
-      /* --sp-0: 0.125rem; */
-      --sp-1: 0.25rem;
-      /* --sp-2: 0.5rem; */
-      /* --sp-3: 1rem; */
-      --sp-4: 2rem;
-      --sp-5: 3rem;
+      footer {
+        color: hsl(0 0% 14.1% / 0.85);
+      }
 
-      --ff-serif: "Brygada", serif;
-      --ff-sans: "Jost", sans-serif;
-    }
+      h1, h2, h3 {
+        font-family: sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+      }
 
-    body {
-      max-width: 640px;
+      h1 > i {
+        font-family: serif;
+        font-weight: 500;
+      }
+    </style>
+  </head>
 
-      margin: var(--sp-5) auto;
-      padding-inline: var(--sp-4);
-
-      background-color: hsl(var(--cl-60));
-      color: hsl(var(--cl-30));
-
-      font-family: var(--ff-serif);
-      line-height: 1.4;
-    }
-
-    header {
-      margin-block: var(-sp-5);
-    }
-
-    footer {
-      font-size: smaller;
-      font-style: italic;
-    }
-
-    footer>p {
-      margin-block: 0;
-    }
-
-    h1,
-    h2 {
-      font-family: var(--ff-sans);
-      /* font-size: 1.125rem; */
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    i,
-    em {
-      font-weight: lighter;
-    }
-
-    li>p {
-      margin-block: 0.25rem;
-    }
-
-    header>h1>i {
-      font-family: var(--ff-serif);
-    }
-
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>Leon Davis, <i>avid computer wizard</i></h1>
-
-    <p>
-      Hey there! I'm one of those wizards who writes spells that make computers
-      do stuff.
-    </p>
-  </header>
-
-  <main>
-    <section aria-labelledby="spellcraft">
-      <h2 id="spellcraft">Spellcraft</h2>
+  <body>
+    <header>
+      <h1>Leon Davis, <i>avid computer wizard</i></h1>
 
       <p>
-        You can have a gander at my spellcraft
-        <a href="https://github.com/leonskidev">here</a>, I'm always trying out
-        ideas. Here are some of them:
+        Hey there! I'm one of those wizards who translate all sorts of ideas into
+        something understandable by a computer.
       </p>
+    </header>
 
-      <ul>
-        <li>
-          <p>
-            <a href="https://github.com/leonskidev/ahh-ts">ahh-ts</a> -
-            Mostly <a href="https://rust-lang.org/">Rust</a>-inpired stuff for
-            <a href="https://deno.land">Deno</a>.
-          </p>
-        </li>
-        <li>
-          <p>
-            <a href="https://github.com/leonskidev/tw4f-rs">tw4f-rs</a> -
-            A tiny and safe abstraction over the
-            <a href="https://wasm4.org/">WASM-4</a> fantasy console.
-          </p>
-        </li>
-      </ul>
-    </section>
+    <main>
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
 
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contact</h2>
+        <p>
+          You can find a complete and up-to-date list of my projects on
+          <a href="https://github.com/leonskidev">GitHub</a>. Otherwise, here
+          are some personal favourites:
+        </p>
 
+        <p>None yet, sorry about that.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+
+        <p>
+          You can contact me via email at
+          <a href="javascript:location='mailto:\u006c\u0065\u006f\u006e\u0073\u006b\u0069\u0064\u0065\u0076\u0040\u0070\u006d\u002e\u006d\u0065';void 0"><script type="text/javascript">document.write('\u006c\u0065\u006f\u006e\u0073\u006b\u0069\u0064\u0065\u0076\u0040\u0070\u006d\u002e\u006d\u0065')</script></a>.
+          I do not and will not own any social media accounts, so you're out of
+          luck in that regard.
+        </p>
+      </section>
+    </main>
+
+    <footer>
       <p>
-        You can contact me via email
-        <a href="mailto:leonskidev@pm.me">leonskidev@pm.me</a> or via a
-        sending stone. I don't own any social media accounts, if you think it's
-        me, it isn't.
+        <small>
+          Copyright &copy; 2022 <b>Leon Davis</b>
+          &middot;
+          Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a>,
+          who was inspired by <a href="http://motherfuckingwebsite.com">this genius</a>
+        </small>
       </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      <a href="mailto:leonskidev@pm.me">Email</a>
-      &middot;
-      <a href="https://github.com/leonskidev">GitHub</a>
-    </p>
-    <p>
-      Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a>, who was inspired
-      by <a href="http://motherfuckingwebsite.com">this genius</a>
-    </p>
-    <p>Copyright 2022 Leon Davis, all rights reserved</p>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
