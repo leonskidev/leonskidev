@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src: 'self';">
 
     <title>Leon Davis</title>
 
     <style>
+      @font-face {
+        font-family: "Brygada 1918";
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: normal;
+        font-display: swap;
+        src: url("assets/Brygada1918.woff2") format("woff2-variations");
+      }
+
+      @font-face {
+        font-family: "Brygada 1918";
+        font-weight: 125 950;
+        font-stretch: 75% 125%;
+        font-style: italic;
+        font-display: swap;
+        src: url("assets/Brygada1918-Italic.woff2") format("woff2-variations");
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -22,7 +41,7 @@
         background-color: hsl(0 0% 99.6%);
         color: hsl(0 0% 14.1%);
 
-        font-family: serif;
+        font-family: "Brygada 1918", serif;
         line-height: 1.4;
       }
 
@@ -41,13 +60,13 @@
       }
 
       h1, h2, h3 {
-        font-family: sans-serif;
+        font-family: system-ui, sans-serif;
         font-weight: 800;
         line-height: 1.2;
       }
 
       h1 > i {
-        font-family: serif;
+        font-family: "Brygada 1918", serif;
         font-weight: 500;
       }
     </style>
