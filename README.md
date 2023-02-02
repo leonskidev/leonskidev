@@ -1,1 +1,1 @@
-Made with ❤️ by Leon Davis.
+Instructions too complicated, dick stuck in toaster.
