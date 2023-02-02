@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src: 'self';">
 
+    <meta content="website" property="og:type">
+    <meta content="Leon Davis" property="og:site_name">
+    <meta content="en" property="og:locale">
+    <meta content="https://leon.is-a.dev/" property="og:url">
+    <meta content="summary" name="twitter:card">
+    <meta content="index, follow" name="robots">
+
     <title>Leon Davis</title>
 
     <style>
@@ -70,6 +77,34 @@
         font-weight: 500;
       }
     </style>
+
+    <script type="module">
+      const reposElement = () => document.getElementById("repos");
+      await fetch("https://gh-pinned-repos.egoist.dev/?username=leonskidev")
+        .catch(() => reposElement().innerText = "I suppose we're out of luck.")
+        .then((res) => res.json())
+        .catch(() => reposElement().innerText = "I suppose we're out of luck.")
+        .then((repos) => {
+          const repoList = document.createElement("ul");
+
+          for (const repo of repos) {
+            const repoLink = document.createElement("a");
+            repoLink.href = repo.link;
+            repoLink.innerText = repo.repo;
+
+            const repoText = document.createElement("p");
+            repoText.innerHTML = `${repoLink.outerHTML} &mdash; ${repo.description}`;
+
+            const repoListItem = document.createElement("li");
+            repoListItem.appendChild(repoText);
+            repoList.appendChild(repoListItem);
+          }
+
+          const parent = reposElement().parentElement;
+          parent.removeChild(reposElement());
+          parent.appendChild(repoList);
+        });
+    </script>
   </head>
 
   <body>
@@ -92,7 +127,7 @@
           are some personal favourites:
         </p>
 
-        <p>None yet, sorry about that.</p>
+        <p id="repos">Just a second...</p>
       </section>
 
       <section aria-labelledby="contact">
