@@ -69,12 +69,8 @@
         padding-inline: 2rem;
       }
 
-      header {
+      header, footer {
         margin-block: 3rem;
-      }
-
-      footer {
-        color: hsl(0 0% 14.1% / 0.85);
       }
 
       h1, h2, h3 {
@@ -90,11 +86,16 @@
     </style>
 
     <script type="module">
-      const REPO_LOADING_ELEMENT = () => document.getElementById("repos");
-      await fetch("https://gh-pinned-repos.egoist.dev/?username=leonskidev")
-        .catch(() => REPO_LOADING_ELEMENT().innerText = "I suppose we're out of luck.")
+      const REPOS_ELEMENT = () => document.getElementById("repos");
+
+      const REPOS_TEXT_ELEMENT = document.createElement("p");
+      REPOS_TEXT_ELEMENT.id = "repos";
+      REPOS_TEXT_ELEMENT.innerText = "Just a second...";
+      REPOS_ELEMENT().parentElement.replaceChild(REPOS_TEXT_ELEMENT, REPOS_ELEMENT());
+
+      fetch("https://gh-pinned-repos.egoist.dev/?username=leonskidev")
+        .then((res) => new Promise((resolve, reject) => res.ok ? resolve(res) : reject()))
         .then((res) => res.json())
-        .catch(() => REPO_LOADING_ELEMENT().innerText = "I suppose we're out of luck.")
         .then((repos) => {
           const repoList = document.createElement("ul");
 
@@ -111,10 +112,9 @@
             repoList.appendChild(repoListItem);
           }
 
-          const parent = REPO_LOADING_ELEMENT().parentElement;
-          parent.removeChild(REPO_LOADING_ELEMENT());
-          parent.appendChild(repoList);
-        });
+          REPOS_ELEMENT().parentElement.replaceChild(repoList, REPOS_ELEMENT());
+        })
+        .catch(() => REPOS_TEXT_ELEMENT.innerText = "I suppose we're out of luck.");
     </script>
   </head>
 
@@ -123,8 +123,9 @@
       <h1>Leon Davis, <i>avid computer wizard</i></h1>
 
       <p>
-        Hey there! I'm one of those wizards who translate all sorts of ideas into
-        something understandable by a computer.
+        Hey there! I turn ideas into wizardry that computers can understand.
+        Contact me <a href="#contact">below</a> if you would like me to do this
+        for you.
       </p>
     </header>
 
@@ -134,11 +135,19 @@
 
         <p>
           You can find a complete and up-to-date list of my projects on
-          <a href="https://github.com/leonskidev">GitHub</a>. Otherwise, here
-          are some personal favourites:
+          <a href="https://github.com/leonskidev">GitHub</a>. Here are some of
+          my favourite projects that I have had a hand in:
         </p>
 
-        <p id="repos">Just a second...</p>
+        <noscript id="repos">
+          <aside>
+            <p>
+              Fret not; you can still click the link above to see what you would
+              have here.
+            </p>
+          </aside>
+        </noscript>
+        <!-- <p id="repos">Just a second...</p> -->
       </section>
 
       <section aria-labelledby="contact">
@@ -146,7 +155,7 @@
 
         <p>
           You can contact me via email at
-          <a href="javascript:location='mailto:\u006c\u0065\u006f\u006e\u0073\u006b\u0069\u0064\u0065\u0076\u0040\u0070\u006d\u002e\u006d\u0065';void 0"><script type="text/javascript">document.write('\u006c\u0065\u006f\u006e\u0073\u006b\u0069\u0064\u0065\u0076\u0040\u0070\u006d\u002e\u006d\u0065')</script></a>.
+          <a href='ma&#105;&#108;to&#58;le&#111;&#37;6E&#37;7&#51;%6B&#105;%&#54;&#52;%65&#37;7&#54;&#64;pm%&#50;&#69;me'>le&#111;nsk&#105;de&#118;&#64;pm&#46;m&#101;</a>.
           I do not and will not own any social media accounts, so you're out of
           luck in that regard.
         </p>
