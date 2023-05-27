@@ -84,38 +84,6 @@
         font-weight: 500;
       }
     </style>
-
-    <script type="module">
-      const REPOS_ELEMENT = () => document.getElementById("repos");
-
-      const REPOS_TEXT_ELEMENT = document.createElement("p");
-      REPOS_TEXT_ELEMENT.id = "repos";
-      REPOS_TEXT_ELEMENT.innerText = "Just a second...";
-      REPOS_ELEMENT().parentElement.replaceChild(REPOS_TEXT_ELEMENT, REPOS_ELEMENT());
-
-      fetch("https://gh-pinned-repos.egoist.dev/?username=leonskidev")
-        .then((res) => new Promise((resolve, reject) => res.ok ? resolve(res) : reject()))
-        .then((res) => res.json())
-        .then((repos) => {
-          const repoList = document.createElement("ul");
-
-          for (const repo of repos) {
-            const repoLink = document.createElement("a");
-            repoLink.href = repo.link;
-            repoLink.innerText = repo.repo;
-
-            const repoText = document.createElement("p");
-            repoText.innerHTML = `${repoLink.outerHTML} &mdash; ${repo.description}`;
-
-            const repoListItem = document.createElement("li");
-            repoListItem.appendChild(repoText);
-            repoList.appendChild(repoListItem);
-          }
-
-          REPOS_ELEMENT().parentElement.replaceChild(repoList, REPOS_ELEMENT());
-        })
-        .catch(() => REPOS_TEXT_ELEMENT.innerText = "Fret not; you can still click the link above to see what you would have here.");
-    </script>
   </head>
 
   <body>
@@ -134,19 +102,10 @@
         <h2 id="projects">Projects</h2>
 
         <p>
-          You can find a complete and up-to-date list of my projects on
-          <a href="https://github.com/leonskidev">GitHub</a>. Here are some
-          projects that I've had a hand in:
+          A complete and up-to-date list of my projects is on
+          <a href="https://github.com/leonskidev">GitHub</a>. Not to worry, they
+          are better organised there than they would be in a list here.
         </p>
-
-        <noscript id="repos">
-          <aside>
-            <p>
-              Fret not; you can still click the link above to see what you would
-              have here.
-            </p>
-          </aside>
-        </noscript>
       </section>
 
       <section aria-labelledby="contact">
