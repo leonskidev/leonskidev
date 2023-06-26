@@ -1,7 +1,5 @@
 @font-face {
     font-family: "Brygada 1918";
-    font-weight: 125 950;
-    font-stretch: 75% 125%;
     font-style: normal;
     font-display: swap;
     src: url("assets/Brygada1918.woff2") format("woff2-variations");
@@ -9,8 +7,6 @@
 
 @font-face {
     font-family: "Brygada 1918";
-    font-weight: 125 950;
-    font-stretch: 75% 125%;
     font-style: italic;
     font-display: swap;
     src: url("assets/Brygada1918-Italic.woff2") format("woff2-variations");
@@ -18,8 +14,6 @@
 
 @font-face {
     font-family: "Inter";
-    font-weight: 125 950;
-    font-stretch: 75% 125%;
     font-style: normal;
     font-display: swap;
     src: url("assets/Inter.woff2") format("woff2-variations");
@@ -52,7 +46,7 @@ body {
     padding-inline: 2rem;
 }
 
-header, footer {
+header, footer, section {
     margin-block: 3rem;
 }
 
