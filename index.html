@@ -64,7 +64,7 @@
       }
 
       body {
-        max-width: calc(80ch + 2rem);
+        max-width: max-content;
         margin-inline: auto;
         padding-inline: 2rem;
       }
@@ -74,6 +74,9 @@
       }
 
       h1, h2, h3 {
+        max-width: 600px;
+        margin-inline: auto;
+
         font-family: "Inter", system-ui, sans-serif;
         font-weight: 800;
         line-height: 1.2;
@@ -82,6 +85,11 @@
       h1 > i {
         font-family: "Brygada 1918", serif;
         font-weight: 500;
+      }
+
+      p {
+        max-width: 600px;
+        margin-inline: auto;
       }
     </style>
   </head>
@@ -124,7 +132,9 @@
       <p>
         <small>
           Copyright &copy; 2023 <b>Leon Davis</b>
-          &middot;
+        </small>
+        <br/>
+        <small>
           Inspired by <a href="http://bettermotherfuckingwebsite.com">this genius</a>,
           who was inspired by <a href="http://motherfuckingwebsite.com">this genius</a>
         </small>
