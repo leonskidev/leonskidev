@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Brygada 1918";
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+    src: url("assets/Brygada1918.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "Brygada 1918";
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: italic;
+    font-display: swap;
+    src: url("assets/Brygada1918-Italic.woff2") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 125 950;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+    src: url("assets/Inter.woff2") format("woff2-variations");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background-color: hsl(0 0% 99.6%);
+    color: hsl(0 0% 14.1%);
+
+    font-family: "Brygada 1918", serif;
+    line-height: 1.4;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+body {
+    max-width: max-content;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+header, footer {
+    margin-block: 3rem;
+}
+
+h1, h2, h3 {
+    max-width: 600px;
+    margin-inline: auto;
+
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h1 > i {
+    font-family: "Brygada 1918", serif;
+    font-weight: 500;
+}
+
+p {
+    max-width: 600px;
+    margin-inline: auto;
+}
